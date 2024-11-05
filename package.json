@@ -11,7 +11,11 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
-    "vue": "^3.4.29"
+    "@element-plus/icons-vue": "^2.3.1",
+    "@vue/runtime-core": "^3.5.5",
+    "element-plus": "^2.8.6",
+    "vue": "^3.4.29",
+    "vue-router": "^4.4.5"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.8.0",
@@ -20,6 +24,9 @@
     "eslint": "^8.57.0",
     "eslint-plugin-vue": "^9.23.0",
     "prettier": "^3.2.5",
-    "vite": "^5.3.1"
+    "sass-embedded": "^1.80.6",
+    "unplugin-auto-import": "^0.18.3",
+    "unplugin-vue-components": "^0.27.4",
+    "vite": "^5.4.5"
   }
 }

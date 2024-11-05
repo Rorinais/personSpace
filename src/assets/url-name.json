@@ -1,0 +1,73 @@
+{
+  "aside": {
+    "项目": "/projects","笔记": "/note","留言": "/message","关于": "/about"
+  },
+  "note":[
+    {
+      "header":{"shader": 24},
+      "content":[
+        {"name":"shader入门","span": 12,"url": "/" },
+        {"name":"点乘与叉乘","span": 12,"url": "/" },
+        {"name":"glsl语法","span": 12,"url": "/" }
+      ]
+    },
+    {
+      "header":{"网页": 24},
+      "content":[
+        {"name":"js","span": 12,"url": "/" },
+        {"name":"vue","span": 12,"url": "/" }
+      ]
+    },
+    {
+      "header":{"C++相关": 24},
+      "content":[
+        {"name":"基础语法","span": 12,"url": "/" },
+        {"name":"cmake","span": 12,"url": "/" }
+      ]
+    },
+    {
+      "header":{"其他": 24},
+      "content":[
+        {"name":"markdown语法","span": 12,"url": "/" },
+        {"name":"git语法","span": 12,"url": "/" }
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "header":{"网页开发": 24},
+      "content":[
+        {"name":"基于车牌识别的车辆管理系统","span": 12,"url": "/" },
+        {"name":"个人空间","span": 12,"url": "/" }]
+    },
+    {
+      "header":{"图形学": 24},
+      "content":[
+        {"name":"opengl渲染","span": 12,"url": "/" }
+      ]
+    }
+  ],
+  "about": [
+    [
+      {
+        "header": "关于我",
+        "content": ["01年，大二自学C++，大三自学web和图形学，24年毕业。"]
+      },
+      {
+        "header": "联系方式",
+        "content": ["邮箱：413843928@qq.com","qq群：825868029"]
+      }
+    ],
+    [
+      {
+        "name":"bilibili","span": 8,"url": "https://b23.tv/4EuE5zC","image": "./images/favicon-bilibili.ico"
+      },
+      {
+        "name":"GitHub","span": 8,"url": "https://github.com/Rorinais","image": "./images/fluidicon-GitHub.png"
+      },
+      {
+        "name":"gitee","span": 8,"url": "https://gitee.com/rorinais","image": "./images/favicon-gitee.ico"
+      }
+    ]
+  ]
+}
