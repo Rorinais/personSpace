@@ -5,140 +5,112 @@
 </script>
 
 <template>
-  <div class="aside-root">
-    <div class="aside-container">
-      <div class="aside-avatar"></div>
-      <div class="aside-name">
-        <h1>
-          <router-link to="/">RORINAIS</router-link>
-        </h1>
-        <p>洛璃奈希个人空间</p>
+  <div class="topbar-root">
+    <div class="topbar-inner">
+      <!-- 左侧：头像 + 名字 -->
+      <div class="topbar-brand">
+        <router-link to="/" class="topbar-name">RORINAIS</router-link>
       </div>
-      <nav class="aside-catalogue">
-        <ul class="catalogue-list">
-          <li v-for="(value, keys) in aside" :key="keys">
-            <router-link :to="value"> {{ keys }} </router-link>
-          </li>
-        </ul>
+
+      <!-- 右侧：导航链接 -->
+      <nav class="topbar-nav">
+        <router-link to="/" class="topbar-link" exact-active-class="router-link-active">首页</router-link>
+        <router-link
+          v-for="(value, keys) in aside"
+          :key="keys"
+          :to="value"
+          class="topbar-link"
+        >{{ keys }}</router-link>
       </nav>
     </div>
   </div>
 </template>
 
 <style scoped>
-.aside-root {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: #e5e7eb;
-}
-
-.aside-container {
+.topbar-root {
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.aside-avatar {
-  border: 3px solid rgba(255,255,255,0.2);
-  border-radius: 50%;
-  margin: 20px auto;
-  background-image: url('/images/avatar.jpg');  /* 改为根路径 */
-  background-position: center center;
-  background-size: cover;
-  box-sizing: border-box;
-  height: 160px;
-  width: 160px;
-  box-shadow: 0 0 30px rgba(99,102,241,0.3), 0 8px 20px rgba(0,0,0,0.4);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-.aside-avatar:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 50px rgba(99,102,241,0.5), 0 12px 28px rgba(0,0,0,0.5);
-}
-
-.aside-name {
-  padding: 12px 20px;
-  text-align: center;
-}
-.aside-name h1 a {
-  font-size: 1.6rem;
-  font-weight: bold;
-  background: var(--accent-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-.aside-name p {
-  color: #9ca3af;
-  text-align: center;
-  margin-top: 4px;
-}
-
-.aside-catalogue {
-  width: 100%;
-  margin-top: 16px;
-}
-.catalogue-list li {
-  line-height: 48px;
-  font-size: 1rem;
-}
-.catalogue-list li a {
-  display: block;
   padding: 0 24px;
-  border-radius: 0 20px 20px 0;
-  color: #cbd5e1;
-  transition: all 0.3s;
-  font-weight: 500;
-}
-.catalogue-list li a:hover {
-  background: rgba(255,255,255,0.05);
-  color: #fff;
-  text-decoration: none;
-}
-.catalogue-list li a.router-link-active {
-  background: rgba(99,102,241,0.15);
-  color: #fff;
-  font-weight: 600;
-  box-shadow: inset 3px 0 0 var(--sidebar-accent);
 }
 
+.topbar-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 56px;
+}
+
+/* 品牌区 */
+.topbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.topbar-name {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-heading);
+  white-space: nowrap;
+}
+.topbar-name:hover {
+  color: var(--accent);
+}
+
+/* 导航链接 */
+.topbar-nav {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.topbar-link {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-body);
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+.topbar-link:hover {
+  background: var(--bg-tertiary);
+  color: var(--accent);
+}
+.topbar-link.router-link-active {
+  background: rgba(99,102,241,0.08);
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* 响应式 */
 @media screen and (max-width: 800px) {
-  .aside-root {
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding: 12px;
+  .topbar-root {
+    padding: 0 12px;
   }
-  .aside-avatar {
-    height: 50px;
-    width: 50px;
-    margin: 0 16px 0 0;
+  .topbar-inner {
+    height: 48px;
   }
-  .aside-name {
-    padding: 0;
-    flex: 1;
+  .topbar-name {
+    font-size: 1rem;
   }
-  .aside-name h1 a {
-    font-size: 1.2rem;
-  }
-  .aside-name p {
+  .topbar-link {
+    padding: 4px 10px;
     font-size: 0.8rem;
   }
-  .aside-catalogue {
-    width: 100%;
-    margin-top: 8px;
+}
+
+@media screen and (max-width: 480px) {
+  .topbar-inner {
+    height: 42px;
+    gap: 8px;
   }
-  .catalogue-list {
-    display: flex;
-    flex-wrap: wrap;
-    padding-left: 0;
-  }
-  .catalogue-list li {
-    width: 25%;
-    line-height: 36px;
+  .topbar-name {
     font-size: 0.9rem;
+  }
+  .topbar-link {
+    padding: 4px 8px;
+    font-size: 0.75rem;
   }
 }
 </style>

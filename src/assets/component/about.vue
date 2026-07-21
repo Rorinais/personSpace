@@ -1,11 +1,13 @@
 <script setup>
 import about from '../url-name.json'
+import ArticleSidebar from './article-sidebar.vue'
 let content = about['about']
 </script>
 
 <template>
-  <el-container class="main-about-root">
-    <el-main class="main-about-main">
+  <div class="page-layout">
+  <div class="page-main">
+  <div class="main-about-root">
       <div class="main-about-main-root">
         <blockquote>
           <p>可以喜欢一个人，一件事或物很长一段时间，
@@ -27,70 +29,97 @@ let content = about['about']
           </el-row>
         </section>
       </div>
-    </el-main>
-    <el-aside class="main-about-aside">
-    </el-aside>
-  </el-container>
+  </div>
+  </div>
+  <div class="page-side"><ArticleSidebar /></div>
+  </div>
 </template>
 
 <style scoped>
-.main-about-root {
-  max-width: 800px;
-  margin: 0 auto;
-  height: 100%;
+.page-layout {
+  max-width: 1200px; margin: 0 auto; display: flex; gap: 24px; padding: 32px 24px;
 }
+.page-main { flex: 1; min-width: 0; }
+.page-side { width: 260px; flex-shrink: 0; }
+
+.main-about-root { padding-bottom: 40px; }
 
 blockquote {
-  margin: 0 0 28px;
-  padding: 20px 24px;
-  background: #ffffff;
+  margin: 0 0 32px;
+  padding: 24px 28px;
+  background: var(--bg-secondary);
   border-left: 4px solid var(--accent);
   border-radius: 0 var(--radius-md) var(--radius-md) 0;
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-sm);
   font-style: italic;
-  color: #4b5563;
+  color: var(--text-body);
   position: relative;
+  line-height: 1.8;
 }
 blockquote::before {
   content: '"';
   position: absolute;
-  top: -10px;
-  left: 12px;
+  top: -12px;
+  left: 14px;
   font-size: 3rem;
   color: var(--accent);
-  opacity: 0.3;
-  font-family: Georgia, serif;
+  opacity: 0.25;
+  font-family: Georgia, 'Noto Serif SC', serif;
 }
 
+section {
+  margin-bottom: 28px;
+}
 section h3 {
   font-weight: 700;
-  margin: 16px 0 10px;
+  margin: 0 0 14px;
   padding-bottom: 8px;
   border-bottom: 2px solid var(--border-color);
   display: inline-block;
+  color: var(--text-heading);
+  font-size: 1.15rem;
+}
+section p {
+  color: var(--text-body);
+  line-height: 1.8;
+  margin-bottom: 8px;
 }
 
 section a {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 8px 16px;
-  background: #eef2ff;
+  padding: 10px 18px;
+  background: var(--bg-tertiary);
   color: var(--accent);
   border-radius: 8px;
   text-decoration: none;
   font-weight: 500;
   margin: 4px;
   transition: 0.2s;
+  font-size: 0.9rem;
 }
 section a:hover {
   background: var(--accent);
   color: #fff;
 }
 section img {
-  width: 24px;
-  height: 24px;
+  width: 22px;
+  height: 22px;
   border-radius: 50%;
   object-fit: cover;
+}
+
+@media screen and (max-width: 900px) {
+  .page-side { display: none; }
+  .page-layout { padding: 20px 14px; }
+}
+@media screen and (max-width: 800px) {
+  .main-about-root {
+    padding: 20px 14px 60px;
+  }
+  blockquote {
+    padding: 16px 20px;
+  }
 }
 </style>
