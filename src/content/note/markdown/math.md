@@ -1,6 +1,6 @@
 ---
 title: 数学公式
-date: 2024-07-28
+date: 2026-07-28
 category: 其他
 tags: [Markdown, 数学, LaTeX]
 prev: /note/markdown/code

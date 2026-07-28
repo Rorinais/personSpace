@@ -11,12 +11,13 @@ function buildPosts() {
   notes.forEach(category => {
     const catName = Object.keys(category.header)[0] || '笔记'
     category.content.forEach(item => {
+      const d = item.date || '2024.06.20'
       posts.push({
         id: item.url.replace(/\//g, '-') + '-note',
         title: item.name,
-        date: '2024.06.20',
-        displayDate: '2024年6月20日',
-        excerpt: item.desc || `学习笔记：${item.name} — 记录学习过程中的关键知识点和实践心得，持续更新中。`,
+        date: d,
+        displayDate: (parts => `${parts[0]}年${parseInt(parts[1])}月${parseInt(parts[2])}日`)(d.split('-')),
+        excerpt: item.desc || `学习笔记：${item.name}`,
         category: catName,
         route: item.url,
         icon: '📝'
