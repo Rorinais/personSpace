@@ -1,0 +1,55 @@
+{
+  "information": {
+    "name": "Rorinais",
+    "birthday": "2001.11",
+    "qqGroup": "825868029",
+    "email": "413843928@qq.com",
+    "bilibili": "https://space.bilibili.com/351668489",
+    "github": "https://github.com/Rorinais"
+  },
+  "techStack": {
+    "C++":     "/note/cpp-basic",
+    "CMake":   "/note/cmake",
+    "Vulkan":  "/note/empty",
+    "OpenGL":  "/note/shader",
+    "GLSL":    "/note/glsl",
+    "Vue.js":  "/note/vue",
+    "JavaScript": "/note/js",
+    "Python":  "/note/empty",
+    "CSS":     "/note/empty"
+  },
+  "projects": [
+    {
+      "name": "个人网站",
+      "date": "2024",
+      "url": "https://github.com/Rorinais/personSpace",
+      "stack": ["Vue.js", "JavaScript", "CSS"],
+      "intro": "个人博客网站，方便分享笔记和项目",
+      "features": ["Vue 3 + Element Plus 构建", "Markdown 内容管理", "响应式布局"]
+    },
+    {
+      "name": "Vulkan 渲染引擎",
+      "date": "2025",
+      "url": "https://github.com/Rorinais/starryEngine",
+      "stack": ["C++", "CMake", "Vulkan"],
+      "intro": "Vulkan 学习项目，封装渲染 API",
+      "features": ["C++17 开发", "Vulkan API 封装", "CMake 构建系统"]
+    },
+    {
+      "name": "OpenGL 学习",
+      "date": "2024",
+      "url": "https://github.com/Rorinais/openglLearnning",
+      "stack": ["C++", "CMake", "OpenGL", "GLSL"],
+      "intro": "OpenGL 渲染引擎，学习图形学基础",
+      "features": ["Shader 管理", "光照模型实现", "模型加载"]
+    },
+    {
+      "name": "软光栅学习",
+      "date": "2024",
+      "url": "https://github.com/Rorinais/softRaster",
+      "stack": ["C++", "CMake"],
+      "intro": "从零实现软光栅渲染器",
+      "features": ["光栅化算法", "深度测试", "纹理映射"]
+    }
+  ]
+}

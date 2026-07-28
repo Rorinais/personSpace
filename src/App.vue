@@ -1,5 +1,5 @@
 <script setup>
-  import Aside from '@/assets/component/aside.vue'
+  import Aside from '@/components/aside.vue'
   import { useRoute } from 'vue-router'
   import { computed, ref, onMounted } from 'vue'
 

@@ -1,0 +1,79 @@
+{
+  "aside": {
+    "项目": "/projects","笔记": "/note","留言": "/message","关于": "/about"
+  },
+  "note":[
+    {
+      "header":{"shader": 24},
+      "content":[
+        {"name":"shader入门","span": 12,"url": "/note/shader", "desc":"从零开始学习 Shader 编程，掌握 GLSL 语法基础与实战技巧。"},
+        {"name":"点乘与叉乘","span": 12,"url": "/note/dot-cross", "desc":"深入理解向量点乘与叉乘的几何意义及其在图形学中的应用。"},
+        {"name":"glsl语法","span": 12,"url": "/note/glsl", "desc":"GLSL 语言核心语法速查，变量、函数、内置方法一网打尽。"}
+      ]
+    },
+    {
+      "header":{"网页开发": 24},
+      "content":[
+        {"name":"JavaScript 基础","span": 12,"url": "/note/js", "desc":"JS 核心概念与实战技巧，前端开发必备基础知识。"},
+        {"name":"Vue.js 学习","span": 12,"url": "/note/vue", "desc":"Vue 3 框架入门，组件化开发与项目实践。"}
+      ]
+    },
+    {
+      "header":{"C++相关": 24},
+      "content":[
+        {"name":"C++ 基础语法","span": 12,"url": "/note/cpp-basic", "desc":"C++ 核心特性，面向对象与 STL 标准库。"},
+        {"name":"CMake 入门","span": 12,"url": "/note/cmake", "desc":"跨平台构建系统，高效管理 C/C++ 项目编译。"}
+      ]
+    },
+    {
+      "header":{"其他": 24},
+      "content":[
+        {"name":"Markdown 语法","span": 12,"url": "/note/markdown", "desc":"Markdown 语法速查，涵盖标题、列表、表格、数学公式等。"}
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "header":{"网页开发": 24},
+      "content":[
+        {"name":"基于车牌识别的车辆管理系统","span": 12,"url": "/projects/vehicleManagementSystem" },
+        {"name":"个人空间","span": 12,"url": "/projects/personSpace" }]
+    },
+    {
+      "header":{"图形学": 24},
+      "content":[
+        {"name":"opengl渲染","span": 12,"url": "/projects/opengl" }
+      ]
+    }
+  ],
+  "about": [
+    [
+      {
+        "header": "关于我",
+        "content": [
+          "暂无数据，留空示例",
+          "暂无数据，留空示例",
+          "暂无数据，留空示例",
+          "暂无数据，留空示例",
+          "暂无数据，留空示例",
+          "暂无数据，留空示例"
+        ]
+      },
+      {
+        "header": "联系方式",
+        "content": ["邮箱：413843928@qq.com","qq群：825868029"]
+      }
+    ],
+    [
+      {
+        "name":"bilibili","span": 8,"url": "https://b23.tv/4EuE5zC","image": "./images/favicon-bilibili.ico"
+      },
+      {
+        "name":"GitHub","span": 8,"url": "https://github.com/Rorinais","image": "./images/fluidicon-GitHub.png"
+      },
+      {
+        "name":"gitee","span": 8,"url": "https://gitee.com/rorinais","image": "./images/favicon-gitee.ico"
+      }
+    ]
+  ]
+}
